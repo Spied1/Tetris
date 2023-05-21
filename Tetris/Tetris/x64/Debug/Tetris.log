@@ -1,0 +1,62 @@
+﻿  main.cpp
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(19,43): warning C4244: аргумент: преобразование "float" в "unsigned int", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(19,36): warning C4244: аргумент: преобразование "float" в "unsigned int", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(102,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(102,17): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(105,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(105,17): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(318,13): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(335,12): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(336,12): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(373,21): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(469,11): warning C4244: инициализация: преобразование "_Ty1" в "int", возможна потеря данных
+          with
+          [
+              _Ty1=float
+          ]
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(470,11): warning C4244: инициализация: преобразование "_Ty2" в "int", возможна потеря данных
+          with
+          [
+              _Ty2=float
+          ]
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(472,10): warning C4244: инициализация: преобразование "_Ty1" в "int", возможна потеря данных
+          with
+          [
+              _Ty1=float
+          ]
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(473,10): warning C4244: инициализация: преобразование "_Ty2" в "int", возможна потеря данных
+          with
+          [
+              _Ty2=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\utility(172,16): warning C4244: инициализация: преобразование "_Ty" в "_Ty1", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              _Ty1=float
+          ]
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(108,23): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept"
+          with
+          [
+              _Other1=int,
+              _Other2=int
+          ]
+D:\gamety\Tetris\Tetris\Tetris\main.cpp(108,11): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept"
+          with
+          [
+              _Other1=int,
+              _Other2=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\utility(172,54): warning C4244: инициализация: преобразование "_Ty" в "_Ty2", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              _Ty2=float
+          ]
+  Tetris.vcxproj -> D:\gamety\Tetris\Tetris\x64\Debug\Tetris.exe
