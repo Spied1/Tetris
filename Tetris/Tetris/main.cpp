@@ -17,7 +17,7 @@ float pointOfSpawnY = sizeY - 10;
 sf::RenderWindow win(sf::VideoMode(sizeX, sizeY), "Tetris");
 std::vector<std::vector<int>> vec(polesize.first, std::vector<int>(polesize.second));
 std::set<std::pair<float, float>> collision_cords;
-
+int points = 0;
 std::vector<std::vector<int>> collors_cords(polesize.first, std::vector<int>(polesize.second));
 std::vector<std::pair<float, float>> hitboxofobj(4);
 bool pole_bool = 0;
@@ -421,6 +421,7 @@ void linedel(int obj_id,float x,float y) {
 		}
 		linexfixer(k);
 		delay = delay - 0.05;
+		points = points + 10;
 	}
 	
 }
@@ -498,7 +499,7 @@ void event_checker(sf::Event event, float& y, float& x, int& obj_id, int& object
 }
 
 void draw(float& y, float& x, int& obj_id, int& object_stage, int& collor_id, int& objR) {
-	
+	sf::Text point;
 	if (!check(0, 16) == true) {
 		int color_id = collor_id;
 
@@ -522,7 +523,13 @@ void draw(float& y, float& x, int& obj_id, int& object_stage, int& collor_id, in
 		}
 	}
 	win.clear();
-
+	sf::Font font;
+	font.loadFromFile("D:/gamety/Tetris/textures/cubic.ttf");
+	point.setFont(font);
+	point.setCharacterSize(24);
+	point.setString(std::to_string(points));
+	point.setPosition(272 - 74, 144 - 16);
+	win.draw(point);
 	object first(obj_id, x, y, object_stage % objR, collor_id);
 	linedel(obj_id,x,y);
 	poleMaker();
