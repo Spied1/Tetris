@@ -8,12 +8,12 @@
 
 
 
-float sizeX = 192+108;
-float sizeY = 352;
+const float sizeX = 192+108;
+const  float sizeY = 352;
 float delay = 0.5;
-std::pair<int, int> polesize = { 22,12 };
-float pointOfSpawnX = sizeX / 2;
-float pointOfSpawnY = sizeY - 10;
+const  std::pair<int, int> polesize = { 22,12 };
+const  float pointOfSpawnX = sizeX / 2;
+const  float pointOfSpawnY = sizeY - 10;
 sf::RenderWindow win(sf::VideoMode(sizeX, sizeY), "Tetris");
 std::vector<std::vector<int>> vec(polesize.first, std::vector<int>(polesize.second));
 std::set<std::pair<float, float>> collision_cords;
@@ -21,6 +21,7 @@ int points = 0;
 std::vector<std::vector<int>> collors_cords(polesize.first, std::vector<int>(polesize.second));
 std::vector<std::pair<float, float>> hitboxofobj(4);
 bool pole_bool = 0;
+//class cube contains information of textures
 class cube {
 public:
 	int posibl = 0;
@@ -80,7 +81,7 @@ public:
 
 
 
-
+//function to make main pole 
 void poleMaker() {
 	;
 	for (int i = 0; i != polesize.first; i++) {
@@ -118,8 +119,8 @@ void poleMaker() {
 
 
 	pole_bool = true;
-}
-
+} // function to make main pull
+//class object contains hitboxes
 class object {
 	// I, S, Z, O, T, L, J
 	// 0, 1, 2, 3, 4, 5, 6
@@ -308,6 +309,7 @@ void nextfig() {
 	//object next(3, 272 - 48, 144 - 16, 1, 1);
 	//object first(obj_id, x, y, object_stage % objR, collor_id);
 }
+//functions to check for lines
 bool check(float xI, float yI) {
 	std::pair<float, float> temp = { xI,yI };
 	for (auto collisions : collision_cords) {
@@ -319,7 +321,7 @@ bool check(float xI, float yI) {
 	}
 	return true;
 }
-
+//uses check for getting cordinate of pole for delete
 float check_for_line() {
 	int pole_t = 0;
 	for (int i = 1; i < polesize.first - 1; i++) {
@@ -338,7 +340,7 @@ float check_for_line() {
 	}
 	return -1;
 }
-
+//recolision of wall game
 void recolision() {
 	std::set<std::pair<float, float>> temp_col;
 	float tt = 0;
@@ -426,7 +428,7 @@ void linedel(int obj_id,float x,float y) {
 	
 }
 
-
+//checks buttons event
 void event_checker(sf::Event event, float& y, float& x, int& obj_id, int& object_stage) {
 	if (event.type == sf::Event::Closed) {
 		win.close();
@@ -497,7 +499,7 @@ void event_checker(sf::Event event, float& y, float& x, int& obj_id, int& object
 		}
 	}
 }
-
+//main function,draws wall game
 void draw(float& y, float& x, int& obj_id, int& object_stage, int& collor_id, int& objR) {
 	sf::Text point;
 	if (!check(0, 16) == true) {
@@ -536,7 +538,7 @@ void draw(float& y, float& x, int& obj_id, int& object_stage, int& collor_id, in
 	nextfig();
 	win.display();
 }
-
+//end of game,closes game
 void game_over(int& game_stage) {
 	std::cout << "Game Over";
 	game_stage = 0;
