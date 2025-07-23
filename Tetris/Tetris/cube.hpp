@@ -1,19 +1,17 @@
 #pragma once
-#include <iostream>
-#include <SFML/Graphics.hpp>
+#include<SFML/Graphics.hpp>
 
-//class cube contains information of textures
-
-class cube 
+class Cube
 {
+private:
+    int posibl = 0;
+    sf::Vector2f m_position;
+    int color_idk = 0;
+    sf::Texture cube_texture;
+    sf::Sprite cube_sprite;
+
 public:
-	int posibl = 0;
-	int posX = 0;
-	int posY = 0;
-	int color_idk = 0;
-	sf::Texture cubeT;
-	sf::Sprite cubeS;
+    Cube(sf::Vector2f position, int color_id = 0);
 
-	cube(int TposX, int TposY, int color_id);
-
+    sf::Sprite& get_sprite();
 };
